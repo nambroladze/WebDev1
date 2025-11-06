@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bio - With CSS</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+        color: #1e293b;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      h1 {
+        color: #1e3a8a;
+        text-align: center;
+        border-bottom: 3px solid #3b82f6;
+        padding-bottom: 10px;
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        border-radius: 10px;
+        border: 3px solid #3b82f6;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #1e40af;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        border-radius: 5px;
+      }
+
+      h2:nth-of-type(1) {
+        background-color: #dbeafe;
+      }
+
+      h2:nth-of-type(2) {
+        background-color: #e0e7ff;
+      }
+
+      h2:nth-of-type(3) {
+        background-color: #e0f2fe;
+      }
+
+      h2:nth-of-type(4) {
+        background-color: #f0f9ff;
+      }
+
+      h2:nth-of-type(5) {
+        background-color: #f5f3ff;
+      }
+
+      p {
+        margin-bottom: 15px;
+        padding: 12px 15px;
+        border-radius: 5px;
+        border-left: 4px solid;
+      }
+
+      h2:nth-of-type(1) + p {
+        background-color: #eff6ff;
+        border-left-color: #3b82f6;
+      }
+
+      h2:nth-of-type(2) + p {
+        background-color: #f5f3ff;
+        border-left-color: #6366f1;
+      }
+
+      h2:nth-of-type(3) + p {
+        background-color: #f0f9ff;
+        border-left-color: #0ea5e9;
+      }
+
+      h2:nth-of-type(4) + p {
+        background-color: #fef3c7;
+        border-left-color: #f59e0b;
+      }
+
+      h2:nth-of-type(5) + p {
+        background-color: #f3e8ff;
+        border-left-color: #a855f7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <img
+      src="https://tse3.mm.bing.net/th/id/OIP.Sko8CQSOZhYy3u_kQB6J3QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+      alt="My Photo"
+      width="200"
+    />
+
+    <h2>My Name</h2>
+    <p>
+      Hi! My name is [Your Name] and I'm a student who loves learning new
+      things!
+    </p>
+
+    <h2>My Interests</h2>
+    <p>
+      I enjoy coding, reading books, playing games, and spending time with
+      friends. I'm always curious about how things work!
+    </p>
+
+    <h2>My Goals</h2>
+    <p>
+      I want to become a great programmer and create amazing websites and apps
+      that help people!
+    </p>
+
+    <h2>Fun Fact</h2>
+    <p>
+      Did you know? I can solve puzzles really fast and I love trying new foods
+      from different countries!
+    </p>
+
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>Location: [Your City]</p>
+  </body>
+</html>

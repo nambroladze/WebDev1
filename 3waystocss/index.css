@@ -1,0 +1,23 @@
+#con {
+  background-color: blue;
+  padding: 10px;
+}
+
+#con-extended {
+  background-color: rgb(0, 255, 76);
+}
+
+/* .container {
+  background-color: green;
+  padding: 20px;
+  border-radius: 10px;
+  border: 10px solid #ccc;
+}
+
+.container-extended {
+  background-color: rgb(0, 255, 76);
+} */
+
+div {
+  background-color: red;
+}
