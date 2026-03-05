@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <p id="error-message" class="error-message"></p>
+      <form class="login-form" onsubmit="LogIn(event)">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="text-input"
+        />
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="text-input"
+        />
+        <label for="remember" class="form-label">Remember me</label>
+        <input
+          type="checkbox"
+          id="remember"
+          name="remember"
+          class="checkbox-input"
+        />
+        <p class="helper-text">Forgot password?</p>
+        <p class="helper-text">
+          Don't have an account? <a href="#" class="helper-link">Sign up</a>
+        </p>
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
