@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Lesson Demo</title>
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">Your Cart</h1>
+      <div class="cart-layout">
+        <section class="card">
+          <article class="cart-item">
+            <div class="item-image"></div>
+            <h2 class="item-name">Linen Overshirt</h2>
+            <p class="item-meta">Qty: 1</p>
+            <p class="item-price">$79.00</p>
+          </article>
+
+          <article class="cart-item">
+            <div class="item-image"></div>
+            <h2 class="item-name">Everyday Tote Bag</h2>
+            <p class="item-meta">Qty: 1</p>
+            <p class="item-price">$39.00</p>
+          </article>
+        </section>
+        <aside class="card">
+          <h2 class="summary-title">Order Summary</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$186.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>$10.00</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span>$196.00</span>
+          </div>
+          <button class="checkout-btn" type="button">
+            Proceed to Checkout
+          </button>
+        </aside>
+      </div>
+    </div>
+    <script type="module" src="cart.js"></script>
+  </body>
+</html>
