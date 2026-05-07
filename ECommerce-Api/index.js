@@ -17,31 +17,6 @@ const products = [
   { id: 3, name: "screen", price: "150$" },
 ];
 
-// app.get("/users", (request, response) => {
-//   response.send(users);
-// });
-
-// app.get("/users/:id", (request, response) => {
-//   const parsedId = parseInt(request.params.id);
-
-//   if (isNaN(parsedId)) {
-//     return response.send("index should be number only");
-//   }
-
-//   if (parsedId < 0 || parsedId >= users.length) {
-//     return response.send("invalid index");
-//   }
-//   response.send(users[request.params.id]);
-// });
-
-// app.get("/users", (request, response) => {
-//   response.send(users);
-// });
-
-// app.get("/nebismieri", (request, response) => {
-//   response.send(products);
-// });
-
 app.get("/users", (request, response) => {
   response.send("users");
 });
@@ -59,6 +34,40 @@ app.post("/users", (request, response) => {
   users.push(newUser);
   response.send(users);
 });
+
+app.put("/products", (request, response) => {
+  const body = request.body;
+
+  const parsedId = parseInt(body.id);
+  if (isNaN(parsedId)) return response.status(400).send("id is not valid");
+
+  const productId = products.find((p) => p.id === parsedId);
+  if (!productId) return response.send("product with this id was not found");
+
+  products[parsedId] = { ...body };
+
+  return response.send(
+    `product updated succesfully ${JSON.stringify(products[parsedId])}`,
+  );
+});
+
+app.patch("/products/:id", (request, response) => {
+  const { body, params } = request;
+
+  const parsedId = parseInt(params.id);
+  if (isNaN(parsedId)) return response.status(400).send("id is not valid");
+
+  const productId = products.find((p) => p.id === parsedId);
+  if (!productId) return response.send("product with this id was not found");
+
+  products[parsedId] = { ...products[parsedId], ...body };
+
+  return response.send(
+    `product updated succesfully ${JSON.stringify(products[parsedId])}`,
+  );
+});
+
+app.delete("/products/:id", (request, response) => {});
 
 app.listen(3000, () => {
   console.log("server is running on http://localhost:3000");
