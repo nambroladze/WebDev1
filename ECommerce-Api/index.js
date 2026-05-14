@@ -4,19 +4,33 @@ const app = express();
 
 app.use(express.json());
 
-const users = [
-  { id: 1, username: "ilo", password: "ilo123" },
-  { id: 2, username: "amiko", password: "amiko123" },
-  { id: 3, username: "saba", password: "saba123" },
-  { id: 6, username: "leto", password: "saba123" },
-];
-
 const products = [
-  { id: 1, name: "mouse", price: "10$" },
-  { id: 2, name: "keyboard", price: "20$" },
-  { id: 3, name: "screen", price: "150$" },
+  { id: 1, category: "Electronics", name: "Smart Watch", price: 200 },
+  { id: 2, category: "Electronics", name: "Camera", price: 300 },
+  { id: 3, category: "Home", name: "White Pillow", price: 20 },
+  { id: 4, category: "Clothing", name: "Black Hoodie", price: 40 },
+  { id: 7, category: "Clothing", name: "red Hoodie", price: 45 },
 ];
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+app.get("/products/:id", (req, res) => {
+  console.log(req.params.id);
+  const parsedid = parseInt(req.params.id);
+
+  if (isNaN(parsedid)) {
+    return res.status(400).send("value should be number");
+  }
+
+  const product = products.find((product) => product.id === parsedId);
+  if (!product) {
+    return res.status(404).send("this product does not exist ");
+  }
+
+  res.status(200).send(product);
+=======
+>>>>>>> Stashed changes
 app.get("/users", (request, response) => {
   response.send("users");
 });
@@ -33,6 +47,7 @@ app.post("/users", (request, response) => {
 
   users.push(newUser);
   response.send(users);
+>>>>>>> d117e123f623127414413595208cc118d9ed6887
 });
 
 app.put("/products", (request, response) => {

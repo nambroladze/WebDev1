@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <button
+    class="login-button"
+    >
+      Login
+    </button>
+    
+    <div class="card">
+      <div class="avatar">👤</div>
+      <div class="username" id="username"></div>
+      <div class="job" id="job"></div>
+      <div class="info">
+        <div class="info-item">
+          <div class="label">ID</div>
+          <div class="value" id="id"></div>
+        </div>
+        <div class="info-item">
+          <div class="label">Age</div>
+          <div class="value" id="age"></div>
+        </div>
+      </div>
+    </div>
+
+      <body>
+ 
+ 
+
+    <script>
+      const profile = { id: 1, username: "niko", age: 19, job: "teacher" };
+
+      document.getElementById("username").textContent = "@" + profile.username;
+      document.getElementById("job").textContent = profile.job;
+      document.getElementById("id").textContent = "#" + profile.id;
+      document.getElementById("age").textContent = profile.age;
+    </script>
+  </body>
+</html>
