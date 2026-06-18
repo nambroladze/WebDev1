@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 const SECRET = process.env.JWT_SECRET;
 
-function auth(req, res, next) {
+export default function auth(req, res, next) {
   const token = req.headers.authorization;
 
   if (!token) {
